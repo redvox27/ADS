@@ -11,22 +11,22 @@ public class RecursionOne {
         float i = 0f;
         float result = 0f;
 
-        while (number > i) {
-            result += (2 * number) / (2 * number + 1);
+        while (number > 1) {
+            result +=  number / (2 * number + 1);
             number--;
 
         }
-        return result;
+        return result + 1/3;
     }
 
     public float getRecResult(float number){
         float result = 0f;
 
         if(number <= 1){
-            return 1;
+            return 1/3;
         }
         else{
-            result =  2 * number / 1 + getRecResult(number-1);
+            result =  number / (2 * number +1) + getRecResult(number-1);
             return result;
         }
     }
